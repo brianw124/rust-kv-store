@@ -59,15 +59,15 @@ The key-value store supports the following operations:
 
 1. **Set** - Store a key-value pair
    ```rust
-   client.set(ctx, SetRequest { key: "hello", value: "world" }).await?;
+   client.set(ctx, SetRequest { key: "hello", value: "world" });
    ```
 
 2. **Get** - Retrieve a value by its key
    ```rust
-   client.get(ctx, GetRequest { key: "hello" }).await?;
+   client.get(ctx, GetRequest { key: "hello" });
    ```
 
 3. **Delete** - Remove a key-value pair
    ```rust
-   client.delete(ctx, DeleteRequest { key: "hello" }).await?;
+   client.delete(ctx, DeleteRequest { key: "hello" });
    ```
