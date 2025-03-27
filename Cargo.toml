@@ -1,0 +1,26 @@
+[package]
+name = "kv-server"
+version = "0.1.0"
+edition = "2021"
+
+# Specify the main binary as server
+[[bin]]
+name = "kv-server"
+path = "src/server.rs"
+
+# Specify the client binary
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+# Use shared_types.rs as the lib
+[lib]
+name = "kv_server"
+path = "src/shared_types.rs"
+
+[dependencies]
+futures = "0.3"
+futures-util = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+tarpc = { version = "0.33", features = ["full"] }
+tokio = { version = "1.28", features = ["full"] } 
